@@ -2,6 +2,7 @@
   --color-backround-primary: #bbb;
   --color-backround-secondary: #ccc;
   --color-background-white: #fff;
+  --color-background-black: #000;
 }
 
 body {
@@ -32,7 +33,7 @@ nav li {
 }
 
 nav a {
-  color: #000;
+  color: var(--color-background-black);
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
@@ -51,8 +52,14 @@ nav a {
   width: 30%;
   vertical-align: top;
   margin: 0 1.5%;
-  padding: 30px 0;
+  padding: 30px 20px;
   box-sizing: border-box;
+  border: 3px solid var(--color-background-black);
+}
+
+span img {
+  width: 100%;
+ 
 }
 
 .products h2 {
@@ -61,7 +68,7 @@ nav a {
 }
 
 .description-product {
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .price-product {
