@@ -99,3 +99,10 @@ span img {
   font-weight: bold;
   margin-top: 10px;
 }
+
+footer {
+  padding: 40px;
+  color: var(--color-background-white);
+  text-align: center;
+  background: url("../images/bg.jpg")
+}
