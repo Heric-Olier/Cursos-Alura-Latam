@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diferencia de Edad</title>
+    <link rel="stylesheet" href="style_dif_edades.css">
+</head>
+
+<body>
+    <h3 class="titulo-h3">Diferencia de Edades</h3>
+
+    <div class="div1">
+        ¿Cuántos años de diferencia tienes con tu hermano?
+    </div>
+    <br>
+    <br>
+    <div class="div2">
+        ¨Nuestra diferencia de edad es¨
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    function saltarLinea() {
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<hr>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+    function imprimir(frase) {
+        saltarLinea();
+        document.write("<big>" + frase + "</big>");
+    }
+
+    var miEdad = 34;
+    var edadHermana = 27;
+    var diferenciaDeEdades = (miEdad - edadHermana);
+
+    imprimir("La edad de mi hermana Eva es: " + (edadHermana) + " años.")
+    imprimir("Mi edad es: " + (miEdad) + " años.")
+    imprimir("Nuestra diferencia de edad es de: " + (diferenciaDeEdades) + " años.")
+
+
+
+</script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla de Multiplicar</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+        -webkit-text-stroke: 0.8px blue;
+        font-family: 'Lato', sans-serif;
+    }
+</style>
+
+<body>
+    <h1>Tabla de Multiplicar</h1>
+
+</body>
+
+</html>
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+    function imprimir(frase) {
+        document.write("<big>" + frase + "</big>");
+        saltarLinea();
+    }
+
+    let multiplicador = 1;
+
+    //Tabla de Multiplicar con el bucle while//
+    while (multiplicador <= 10) {
+        imprimir(5 * multiplicador);
+        multiplicador = multiplicador + 1;
+    }
+    //Tabla de Multiplicar con el bucle for//
+    for (var i = 1; i <= 10; i++) {
+        imprimir(5 * i);
+    }
+
+
+
+
+
+
+
+</script>

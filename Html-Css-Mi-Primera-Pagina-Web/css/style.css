@@ -1,0 +1,57 @@
+:root {
+  --color-backround: #ccc;
+  --color-background-white: #fff;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-tittle {
+  padding-left: 30px;
+}
+
+.img-banner {
+  width: 100%;
+}
+
+.principal {
+  background-color: var(--color-backround);
+}
+
+.title-centralized {
+  text-align: center;
+}
+
+.mision {
+  font-size: 20px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+em strong {
+  color: red;
+}
+
+.diferenciales {
+  background-color: var(--color-background-white);
+  padding: 30px;
+}
+
+.items {
+  font-style: italic;
+}
+
+ul {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  margin-right: 15%;
+}
+
+.img-diferenciales {
+  width: 50%;
+}

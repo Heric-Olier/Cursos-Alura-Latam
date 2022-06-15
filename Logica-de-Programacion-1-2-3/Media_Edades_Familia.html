@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla de Multiplicar</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+        -webkit-text-stroke: 0.8px blue;
+        font-family: 'Lato', sans-serif;
+    }
+</style>
+
+<body>
+    <h1>Programa para calcular<br>la Media de una Familia</h1>
+
+</body>
+
+</html>
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+    function imprimir(frase) {
+        document.write("<big>" + frase + "</big>");
+        saltarLinea();
+    }
+
+    let numDeMiembros = parseInt(prompt("Ingrese la cantidad de miembros de su familia"));
+    let contador = 1;
+    let totalEdades = 0;
+
+    while (contador <= numDeMiembros) {
+
+        edad = parseInt(prompt("Ingrese la edad del familiar"))
+        totalEdades = totalEdades + edad;
+        contador++;
+    }
+
+    let mediadeEdades = totalEdades / numDeMiembros;
+
+    imprimir("La media de edades de su familia es " + mediadeEdades);
+
+    /*let edadPadre = 42;
+    let edadMadre = 38;
+    let edadHijo = 15;
+    let edadHija = 12;
+
+    let totalEdad = edadPadre + edadMadre + edadHijo + edadHija;
+    let mediaEdad = totalEdad / 4;
+
+    imprimir("La media de las edades es: " + mediaEdad);*/
+
+
+
+
+</script>

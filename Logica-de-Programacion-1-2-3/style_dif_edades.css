@@ -1,0 +1,42 @@
+.titulo-h3 {
+    -webkit-text-stroke: 0.8px rgb(0, 0, 0);
+    color: rgb(255, 204, 0);
+    font-family: arial;
+    font-size: 40px;
+    text-shadow: 0 0 5px rgb(255, 0, 0);
+    text-align: left;
+}
+
+body {
+    background-color: rgb(33, 35, 46);
+
+}
+
+.div1 {
+    font-family: sans-serif;
+    font-size: 20px;
+    border-radius: 16px;
+    width: 400px;
+    background-color: rgb(0, 238, 255);
+    padding: 20px;
+    box-shadow: 0 0 10px rgb(134, 134, 134);
+    text-align: center;
+    box-align: center;
+
+}
+
+.div2 {
+    font-family: sans-serif;
+    font-size: 20px;
+    border-radius: 16px;
+    width: 400px;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    box-shadow: 0 0 10px rgb(134, 134, 134);
+    text-align: center;
+    box-align: center;
+    color: azure;
+
+
+
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calcular IMC</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+        -webkit-text-stroke: 0.2px rgb(255, 0, 140);
+        font-family: impact;
+        font-size: 40px;
+    }
+</style>
+
+<body>
+    <h1>Inicio de Sesion</h1>
+
+</body>
+
+</html>
+<script>
+
+    let inicioDeSesionRegistrado = "alura";
+    let contrasenaRegistrada = "alura321";
+
+    let intentos = 3;
+    let contador = 1;
+
+    while (contador <= intentos) {
+
+        var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+        var contrasenaIngresada = prompt("Ingrese su contrasena");
+
+        if (inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenaRegistrada == contrasenaIngresada) {
+            alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+            braek;
+
+        } else {
+
+            alert("inicio de sesion invalido. Favor intente de nuevo");
+        }
+
+        contador++;
+    }
+
+    document.write("Ha superado el numero de intentos.");
+
+</script>

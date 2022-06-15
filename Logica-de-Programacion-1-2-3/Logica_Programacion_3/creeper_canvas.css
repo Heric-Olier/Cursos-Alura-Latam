@@ -1,0 +1,16 @@
+.creditos {
+    font-size: 20px;
+    font-family: monospace;
+    position: relative;
+    bottom: 95px;
+    left: 80px;
+    color: white;
+}
+
+.creditos-alura {
+    color: rgb(37, 96, 206);
+}
+
+.creditos-oracle {
+    color: rgb(214, 24, 24);
+}

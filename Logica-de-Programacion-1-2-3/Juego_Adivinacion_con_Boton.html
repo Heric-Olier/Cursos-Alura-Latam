@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <input type="text" placeholder="Ingrese un numero entre 0-10">
+    <button>Verificar Numero</button>
+    <meta charset="UTF-8">
+    <title>Juego de Adivinacion con Boton</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+        -webkit-text-stroke: 0.8px blue;
+        font-family: 'Lato', sans-serif;
+    }
+</style>
+
+<body>
+    <h1>Juego Adivinacion</h1>
+
+</body>
+
+</html>
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+    function imprimir(frase) {
+        document.write("<big>" + frase + "</big>");
+        saltarLinea();
+    }
+
+    let intentos = 3;
+    let contador = 1;
+    let numeroPensado = Math.round(Math.random() * 10);
+    let input = document.querySelector("input");
+    input.focus();
+
+    function verificar() {
+        var encontrado = false;
+        while (contador <= intentos) {
+
+            if (parseInt(input.value) == numeroPensado) {
+                alert("Usted acerto en el intento " + contador + " el numero pensado era " + numeroPensado);
+                encontrado = true;
+                break;
+            }
+        }
+
+        if (encontrado == false) {
+            alert("Numero Equivocado");
+        }
+        contador++;
+
+        if (parseInt(input.value) == numeroPensado) {
+
+            imprimir("Usted acerto en el intento " + contador + " el numero pensado era " + numeroPensado);
+        }
+
+        else {
+
+            imprimir("Usted erro, el numero pensado era " + numeroPensado);
+        }
+
+        input.value = "";
+        input.focus();
+
+    }
+
+    let button = document.querySelector("button");
+    button.onclick = verificar;
+
+
+
+    /*while (contador <= intentos) {
+
+        var numeroLanzado = parseInt(prompt("Ingrese un numero entre 0-10"));
+        if (numeroPensado == numeroLanzado) {
+            alert("Usted acerto en el intento " + contador + " el numero pensado era " + numeroPensado);
+            break;
+        }
+
+        else {
+
+            alert("Usted erro");
+        }
+
+        contador++;
+    }
+
+    if (numeroPensado == numeroLanzado) {
+
+        imprimir("Usted acerto en el intento " + contador + " el numero pensado era " + numeroPensado);
+    }
+
+    else {
+
+        imprimir("Usted erro, el numero pensado era " + numeroPensado);
+    }
+
+
+    imprimir("Fin.")*/
+
+</script>
