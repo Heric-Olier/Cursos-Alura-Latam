@@ -4,6 +4,7 @@
   --color-background-white: #fff;
   --color-background-black: #000;
   --color-hover: #c78c19;
+  --color-active: #088c19;
 }
 
 body {
@@ -67,9 +68,17 @@ nav a:hover {
 }
 
 .products span:hover {
-  border: 3px solid var(--color-hover);
+  border-color: var(--color-hover);
   transform: scale(1.07);
-  
+}
+
+.products span:hover h2 {
+  transition: 0.3s ease all;
+  font-size: 28px;
+}
+
+.products span:active {
+  border-color: var(--color-active);
 }
 
 span img {
