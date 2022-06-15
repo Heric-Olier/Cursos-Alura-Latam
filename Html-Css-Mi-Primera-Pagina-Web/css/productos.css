@@ -3,6 +3,7 @@
   --color-backround-secondary: #ccc;
   --color-background-white: #fff;
   --color-background-black: #000;
+  --color-hover: #c78c19;
 }
 
 body {
@@ -38,6 +39,12 @@ nav a {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 24px;
+  transition: 0.3s ease all;
+}
+
+nav a:hover {
+  color: var(--color-hover);
+  text-decoration: underline;
 }
 
 .products {
@@ -56,11 +63,17 @@ nav a {
   box-sizing: border-box;
   border: 3px solid var(--color-background-black);
   border-radius: 10px;
+  transition: 0.3s ease all;
+}
+
+.products span:hover {
+  border: 3px solid var(--color-hover);
+  transform: scale(1.07);
+  
 }
 
 span img {
   width: 100%;
- 
 }
 
 .products h2 {
