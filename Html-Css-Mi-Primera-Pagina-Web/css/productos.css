@@ -102,7 +102,12 @@ span img {
 
 footer {
   padding: 40px;
-  color: var(--color-background-white);
   text-align: center;
   background: url("../images/bg.jpg")
+}
+
+.copyright {
+  font-size: 14px;
+  margin: 20px;
+  color: var(--color-background-white);
 }
