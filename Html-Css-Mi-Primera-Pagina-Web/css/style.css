@@ -7,7 +7,6 @@
   --color-active: #088c19;
 }
 
-
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -104,11 +103,33 @@ span img {
 footer {
   padding: 40px;
   text-align: center;
-  background: url("../images/bg.jpg")
+  background: url("../images/bg.jpg");
 }
 
 .copyright {
   font-size: 14px;
   margin: 20px;
   color: var(--color-background-white);
+}
+
+main {
+  margin: 0 auto;
+  width: 940px;
+}
+
+form {
+  margin: 40px 0;
+}
+
+form label {
+  display: block;
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+form input {
+  display: block;
+  margin: 0 0 20px;
+  padding: 10px 25px;
+  width: 50%;
 }
