@@ -121,15 +121,19 @@ form {
   margin: 40px 0;
 }
 
-form label {
+form label, form p {
   display: block;
   font-size: 18px;
   margin: 0 0 10px;
 }
 
-form input {
+.input-father {
   display: block;
   margin: 0 0 20px;
   padding: 10px 25px;
   width: 50%;
+}
+
+.checkbox {
+  margin: 20px 5px;
 }
