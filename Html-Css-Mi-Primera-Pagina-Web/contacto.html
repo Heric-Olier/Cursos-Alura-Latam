@@ -38,13 +38,25 @@
     <main>
       <form>
         <label for="nombreapellido">Nombre y Apellido</label>
-        <input type="text" id="nombreapellido" class="input-father" />
+        <input type="text" id="nombreapellido" class="input-father" required />
 
         <label for="email">Email</label>
-        <input type="email" id="email" class="input-father" />
+        <input
+          type="email"
+          id="email"
+          class="input-father"
+          required
+          placeholder="email@dominio.com"
+        />
 
         <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono" class="input-father" />
+        <input
+          type="tel"
+          id="telefono"
+          class="input-father"
+          required
+          placeholder="(XX) XXXX XXXX"
+        />
 
         <label for="mensaje">Mensaje</label>
         <textarea
@@ -53,6 +65,7 @@
           cols="70"
           rows="10"
           class="input-father"
+          required
         ></textarea>
 
         <div>
@@ -81,7 +94,7 @@
               type="radio"
               name="contacto"
               value="email"
-              id="radio-whatsapp"
+              id="radio-whatsapp" checked
             />Whatsapp</label
           >
         </div>
@@ -96,7 +109,7 @@
         </div>
 
         <label
-          ><input type="checkbox" class="checkbox" />Le gustaria recibir
+          ><input type="checkbox" class="checkbox" checked />Le gustaria recibir
           novedades acerca de la Barberia Alura</label
         >
 
