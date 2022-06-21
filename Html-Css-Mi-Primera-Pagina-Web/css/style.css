@@ -154,4 +154,5 @@ form legend {
 
 .send:hover {
   background: darkorange;
+  transform: scale(1.12);
 }
