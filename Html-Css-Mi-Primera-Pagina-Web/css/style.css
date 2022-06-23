@@ -203,6 +203,15 @@ th {
   margin: 0 20px 20px 0;
 }
 
+.map {
+  padding: 3em 0;
+}
+
+.map p {
+  margin: 0 0 2em;
+  text-align: center;
+}
+
 .img-diferenciales {
   width: 60%;
 }
