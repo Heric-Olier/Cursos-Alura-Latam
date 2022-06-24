@@ -112,11 +112,6 @@ footer {
   color: var(--color-background-white);
 }
 
-main {
-  margin: 0 auto;
-  width: 940px;
-}
-
 form {
   margin: 40px 0;
 }
@@ -172,7 +167,7 @@ th {
   padding: 8px 15px;
 }
 
-/*CSS para el home*/
+/*! <---- CSS para el home ----> */
 
 .img-banner {
   width: 100%;
@@ -197,6 +192,13 @@ th {
   font-style: italic;
 }
 
+.principal {
+  margin: 0 auto;
+  width: 940px;
+  background-color: #fefefe;
+  padding: 3em 0;
+}
+
 .utensilios {
   width: 120px;
   float: left;
@@ -205,11 +207,22 @@ th {
 
 .map {
   padding: 3em 0;
+  background: linear-gradient(#fefefe, #888);
 }
 
 .map p {
   margin: 0 0 2em;
   text-align: center;
+}
+
+.content-map {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.diferenciales {
+  background-color: #888;
+  padding: 3em 0;
 }
 
 .content-diferenciales {
@@ -225,6 +238,10 @@ th {
 
 .items {
   line-height: 1.5;
+}
+
+.items:first-child {
+  font-weight: bold;
 }
 
 .img-diferenciales {
