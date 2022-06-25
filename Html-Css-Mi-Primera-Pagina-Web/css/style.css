@@ -180,19 +180,40 @@ th {
   clear: left;
 }
 
-.principal p {
-  margin: 0 0 1em;
-}
-
-.principal strong {
+.title-main::first-letter {
   font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  line-height: 1.2;
 }
 
-.principal em {
+.title-main::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #000;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+p::first-line {
   font-style: italic;
 }
 
-.principal {
+.container-main p {
+  margin: 0 0 1em;
+}
+
+.container-main strong {
+  font-weight: bold;
+}
+
+.container-main em {
+  font-style: italic;
+}
+
+.container-main {
   margin: 0 auto;
   width: 940px;
   background-color: #fefefe;
@@ -238,6 +259,11 @@ th {
 
 .items {
   line-height: 1.5;
+}
+
+.items::before {
+  content: "✪";
+  margin: 0 10px;
 }
 
 .items:first-child {
