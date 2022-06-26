@@ -272,11 +272,12 @@ p::first-line {
 
 .img-diferenciales {
   width: 60%;
+  box-shadow: 0 0 10px #000;
+  transition: 400ms;
 }
 
 .img-diferenciales:hover {
   opacity: 0.5;
-  transition: 400ms;
 }
 
 .video {
