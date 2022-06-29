@@ -304,7 +304,8 @@ p::first-line {
     width: auto;
   }
 
-  .list-diferenciales, .img-diferenciales {
+  .list-diferenciales,
+  .img-diferenciales {
     width: 100%;
   }
 }
