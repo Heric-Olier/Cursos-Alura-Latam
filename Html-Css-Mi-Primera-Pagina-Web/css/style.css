@@ -83,6 +83,7 @@ nav a:hover {
 
 span img {
   width: 100%;
+  border: 3px solid var(--color-background-black);
 }
 
 .products h2 {
@@ -254,6 +255,7 @@ p::first-line {
 .list-diferenciales {
   width: 40%;
   display: inline-block;
+
   vertical-align: top;
 }
 
