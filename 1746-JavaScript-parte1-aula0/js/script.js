@@ -10,9 +10,9 @@ console.log(weight);            // mostra o peso do paciente
 console.log(tdHeight);  // mostra a altura do paciente
 console.log(height);        // mostra a altura do paciente
 
-let imc = weight / (height * height);
-console.log(imc);
-document.write(imc);
+let imc = weight / (height * height);   // calcula o imc
+console.log(imc);   // mostra o imc
+document.write(imc);    // mostra o imc no documento
 
 
 // Language: javascript 
