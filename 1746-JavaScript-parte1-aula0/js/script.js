@@ -12,3 +12,4 @@ console.log(height);
 
 let imc = weight / (height * height);
 console.log(imc);
+document.write(imc);
