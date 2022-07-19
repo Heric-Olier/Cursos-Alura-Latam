@@ -1,9 +1,7 @@
-
-
-let firstPatient = document.querySelector('#first__patient');
-let tdWeight = document.querySelector('.info-peso');
+let firstPatient = document.querySelector("#first__patient");
+let tdWeight = document.querySelector(".info-peso");
 let weight = tdWeight.textContent;
-let tdHeight = document.querySelector('.info-altura');
+let tdHeight = document.querySelector(".info-altura");
 let height = tdHeight.textContent;
 
 console.log(firstPatient);
