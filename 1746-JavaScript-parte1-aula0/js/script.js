@@ -11,10 +11,16 @@ for (let i = 0; i < patients.length; i++) {
     let weightIsValid = true;
     let heightIsValid = true;
     
-    if (weight < 0 || weight > 1000 || height < 0 || height > 3.0) {
-      tdImc.textContent = "Datos inválidos";
+    if (weight < 0 || weight > 1000) {
+      tdImc.textContent = "Peso inválido";
       weightIsValid = false;
+      patient.classList.add("invalid-patient");
+    }
+
+    if (height < 0 || height > 3.00) {
+      tdImc.textContent = "Altura inválida";
       heightIsValid = false;
+      patient.classList.add("invalid-patient");
     }
     
     if (weightIsValid && heightIsValid) {
