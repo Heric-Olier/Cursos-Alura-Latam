@@ -1,9 +1,43 @@
 let patients = document.querySelectorAll(".paciente");
-let addPatientBtn = document.querySelector("#adicionar-paciente");
+let addPatientBtn = document.querySelector("#adicionar-paciente"); // selecionamos el boton de agregar pacientes
 
-addPatientBtn.addEventListener("click", function () {
-  alert("Paciente adicionado com sucesso!");
+
+
+
+//*! Evento para adicionar un nuevo paciente
+
+addPatientBtn.addEventListener("click", function (event) {
+  event.preventDefault(); //con esta propiedad prevenimos que la pagina se recargue luego de darle click al boton
+  let form = document.querySelector("#add-form"); // selecionamos el formulario
+  let nameForm = form.nombre.value;
+  let weightForm = form.peso.value;
+  let heightForm = form.altura.value;
+  let fatnessForm = form.gordura.value;
+  
+  console.log(nameForm);
+  console.log(weightForm);
+  console.log(heightForm);
+  console.log(fatnessForm);
+
+  let patientTr = document.createElement("tr"); // creamos una nueva fila
+  let nameTd = document.createElement("td"); // creamos una nueva columna
+  let weightTd = document.createElement("td");  // creamos una nueva columna
+  let heightTd = document.createElement("td");  // creamos una nueva columna
+  let fatnessTd = document.createElement("td");  // creamos una nueva columna
+  let imcTd = document.createElement("td");  // creamos una nueva columna
+
+
+
+  //*! Validacion de los datos ingresados
+
+  if (nameForm == "" || weightForm == "" || heightForm == "" || fatnessForm == "") {
+    alert("Por favor, complete todos los campos");
+    return;
+  }
 });
+
+
+//*! Calculamos el IMC de los pacientes
 
 for (let i = 0; i < patients.length; i++) {
   let patient = patients[i];
