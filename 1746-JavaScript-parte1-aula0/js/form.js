@@ -6,11 +6,10 @@ addPatientBtn.addEventListener("click", function (event) {
   event.preventDefault(); //con esta propiedad prevenimos que la pagina se recargue luego de darle click al boton
   let form = document.querySelector("#add-form"); // selecionamos el formulario
   let table = document.querySelector("#tabla-pacientes"); // selecionamos la tabla
-  let nameForm = form.nombre.value;
-  let weightForm = form.peso.value;
-  let heightForm = form.altura.value;
-  let fatnessForm = form.gordura.value;
+  let patient = capturePatientData(form); // capturamos los datos del formulario
+  
 
+  /* Crear los elementos de la tabla */
 
   let patientTr = document.createElement("tr"); // creamos una nueva fila
   let nameTd = document.createElement("td"); // creamos una nueva columna
@@ -21,11 +20,13 @@ addPatientBtn.addEventListener("click", function (event) {
 
   /* Agregamos los valores a las columnas */
 
-  nameTd.textContent = nameForm;
-  weightTd.textContent = weightForm;
-  heightTd.textContent = heightForm;
-  fatnessTd.textContent = fatnessForm;
-  imcTd.textContent = calculateImc(weightForm, heightForm);
+  nameTd.textContent = patient.nameForm;
+  weightTd.textContent = patient.weightForm;
+  heightTd.textContent = patient.heightForm;
+  fatnessTd.textContent = patient.fatnessForm;
+  imcTd.textContent = calculateImc(patient.weightForm, patient.heightForm);
+
+  /* Agregamos las columnas a la fila */
 
   patientTr.appendChild(nameTd);
   patientTr.appendChild(weightTd);
@@ -37,11 +38,25 @@ addPatientBtn.addEventListener("click", function (event) {
 
   /* Validacion de los datos ingresados */
 
-  if (nameForm == "" || weightForm == "" || heightForm == "" || fatnessForm == "") {
+  if (patient.nameForm == "" || patient.heightFormweightForm == "" || patient.heightForm == "" || patient.fatnessForm == "") {
     alert("Por favor, complete todos los campos");
     return;
   }
 });
+
+let capturePatientData = function (form) {
+    /* Obtenemos los datos del formulario */
+
+    let patient = {
+      nameForm: form.nombre.value,
+      weightForm: form.peso.value,
+      heightForm: form.altura.value,
+      fatnessForm: form.gordura.value
+      
+    };
+
+    return patient; 
+}
 
 
 // agregamos a localStorage los nuevos pacientes
