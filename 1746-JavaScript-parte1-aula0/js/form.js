@@ -19,7 +19,7 @@ addPatientBtn.addEventListener("click", function (event) {
     patient.fatnessForm == ""
   ) {
     alert("Por favor, complete todos los campos");
-    return;
+    return false;
   }
 });
 
@@ -28,7 +28,10 @@ addPatientBtn.addEventListener("click", function (event) {
 let buildPatientTr = function (patient) {
   /* Crear los elementos de la tabla */
   let patientTr = document.createElement("tr"); // creamos una nueva fila
+  patientTr.classList.add("paciente"); // agregamos la clase paciente
   let nameTd = document.createElement("td"); // creamos una nueva columna
+  nameTd.classList.add("info-nombre"); // agregamos la clase info-nombre
+
   let weightTd = document.createElement("td"); // creamos una nueva columna
   let heightTd = document.createElement("td"); // creamos una nueva columna
   let fatnessTd = document.createElement("td"); // creamos una nueva columna
@@ -50,7 +53,6 @@ let buildPatientTr = function (patient) {
 
   return patientTr;
 };
-
 
 //! Capturamos los datos del formulario
 
