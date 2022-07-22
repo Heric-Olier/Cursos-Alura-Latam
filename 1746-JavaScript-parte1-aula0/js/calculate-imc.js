@@ -5,7 +5,7 @@ let patients = document.querySelectorAll(".paciente");
 let calculateImc = function (weight, height) {
   let imc = weight / (height * height);
   return imc.toFixed(2);
-}
+};
 
 for (let i = 0; i < patients.length; i++) {
   let patient = patients[i];
@@ -34,4 +34,3 @@ for (let i = 0; i < patients.length; i++) {
     tdImc.textContent = calculateImc(weight, height);
   }
 }
-
