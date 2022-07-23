@@ -9,18 +9,10 @@ addPatientBtn.addEventListener("click", function (event) {
   let patient = capturePatientData(form); // capturamos los datos del formulario
   let patientTr = buildPatientTr(patient); // creamos la fila del paciente
   table.appendChild(patientTr);
+  form.reset(); // reseteamos el formulario
 
   /* Validacion de los datos ingresados */
 
-  if (
-    patient.nameForm == "" ||
-    patient.heightFormweightForm == "" ||
-    patient.heightForm == "" ||
-    patient.fatnessForm == ""
-  ) {
-    alert("Por favor, complete todos los campos");
-    return false;
-  }
 });
 
 //! Creamos los elementos de la tabla de pacientes TR y TD
@@ -29,29 +21,22 @@ let buildPatientTr = function (patient) {
   /* Crear los elementos de la tabla */
   let patientTr = document.createElement("tr"); // creamos una nueva fila
   patientTr.classList.add("paciente"); // agregamos la clase paciente
-  let nameTd = document.createElement("td"); // creamos una nueva columna
-  nameTd.classList.add("info-nombre"); // agregamos la clase info-nombre
-
-  let weightTd = document.createElement("td"); // creamos una nueva columna
-  let heightTd = document.createElement("td"); // creamos una nueva columna
-  let fatnessTd = document.createElement("td"); // creamos una nueva columna
-  let imcTd = document.createElement("td"); // creamos una nueva columna
-
-  /* Agregamos los valores a las columnas */
-  nameTd.textContent = patient.nameForm;
-  weightTd.textContent = patient.weightForm;
-  heightTd.textContent = patient.heightForm;
-  fatnessTd.textContent = patient.fatnessForm;
-  imcTd.textContent = calculateImc(patient.weightForm, patient.heightForm);
 
   /* Agregamos las columnas a la fila */
-  patientTr.appendChild(nameTd);
-  patientTr.appendChild(weightTd);
-  patientTr.appendChild(heightTd);
-  patientTr.appendChild(fatnessTd);
-  patientTr.appendChild(imcTd);
+  patientTr.appendChild(buildPatientTd(patient.nameForm, "info-nombre"));
+  patientTr.appendChild(buildPatientTd(patient.weightForm, "info-peso"));
+  patientTr.appendChild(buildPatientTd(patient.heightForm, "info-altura"));
+  patientTr.appendChild(buildPatientTd(patient.fatnessForm, "info-gordura"));
+  patientTr.appendChild(buildPatientTd(calculateImc(patient.weightForm, patient.heightForm), "info-imc"));
 
   return patientTr;
+};
+
+let buildPatientTd = function (dato, clase) {
+  let td = document.createElement("td");
+  td.classList.add(clase);
+  td.textContent = dato;
+  return td;
 };
 
 //! Capturamos los datos del formulario
