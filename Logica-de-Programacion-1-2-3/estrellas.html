@@ -1,51 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Calcular IMC</title>
-</head>
-<style>
+  </head>
+  <style>
     h1 {
-        text-align: center;
-        -webkit-text-stroke: 0.8px blue;
-        font-family: 'Lato', sans-serif;
+      text-align: center;
+      -webkit-text-stroke: 0.8px blue;
+      font-family: "Lato", sans-serif;
     }
-</style>
+  </style>
 
-<body>
+  <body>
     <h1>Juego Adivinacion</h1>
-
-</body>
-
+  </body>
 </html>
 <script>
+  function saltarLinea() {
+    document.write("<br>");
+  }
 
-    function saltarLinea() {
-        document.write("<br>");
-
-
-    }
-
-    function imprimir(frase) {
-        document.write("<big>" + frase + "</big>");
-        saltarLinea();
-    }
-
-    for (var lineas = 1; lineas <= 3; lineas++) {
-
-        for (var columnas = 1; columnas <= 10; columnas++) {
-
-            document.write("*");
-        }
-        saltarLinea();
-
-    }
-
+  function imprimir(frase) {
+    document.write("<big>" + frase + "</big>");
     saltarLinea();
+  }
+
+  for (var lineas = 1; lineas <= 3; lineas++) {
+    for (var columnas = 1; columnas <= 10; columnas++) {
+      document.write("*");
+    }
     saltarLinea();
+  }
 
-
-
-
+  saltarLinea();
+  saltarLinea();
 </script>
