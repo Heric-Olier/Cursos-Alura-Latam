@@ -8,11 +8,15 @@ addPatientBtn.addEventListener("click", function (event) {
   let table = document.querySelector("#tabla-pacientes"); // selecionamos la tabla
   let patient = capturePatientData(form); // capturamos los datos del formulario
   let patientTr = buildPatientTr(patient); // creamos la fila del paciente
+  //todo: VALIDAR PACIENTE//
+  if (!validatePatient(patient)) {
+    console.log("Paciente invalido");
+    return;
+  }
   table.appendChild(patientTr);
   form.reset(); // reseteamos el formulario
 
   /* Validacion de los datos ingresados */
-
 });
 
 //! Creamos los elementos de la tabla de pacientes TR y TD
@@ -21,13 +25,17 @@ let buildPatientTr = function (patient) {
   /* Crear los elementos de la tabla */
   let patientTr = document.createElement("tr"); // creamos una nueva fila
   patientTr.classList.add("paciente"); // agregamos la clase paciente
-
   /* Agregamos las columnas a la fila */
   patientTr.appendChild(buildPatientTd(patient.nameForm, "info-nombre"));
   patientTr.appendChild(buildPatientTd(patient.weightForm, "info-peso"));
   patientTr.appendChild(buildPatientTd(patient.heightForm, "info-altura"));
   patientTr.appendChild(buildPatientTd(patient.fatnessForm, "info-gordura"));
-  patientTr.appendChild(buildPatientTd(calculateImc(patient.weightForm, patient.heightForm), "info-imc"));
+  patientTr.appendChild(
+    buildPatientTd(
+      calculateImc(patient.weightForm, patient.heightForm),
+      "info-imc"
+    )
+  );
 
   return patientTr;
 };
@@ -51,4 +59,11 @@ let capturePatientData = function (form) {
   };
 
   return patient;
+};
+
+let validatePatient = (patient) => {
+  if (validatePatientWeight(patient.weightForm)) {
+    return true;
+  }
+  return false;
 };
