@@ -9,10 +9,17 @@ addPatientBtn.addEventListener("click", function (event) {
   let patient = capturePatientData(form); // capturamos los datos del formulario
   let patientTr = buildPatientTr(patient); // creamos la fila del paciente
   //todo: VALIDAR PACIENTE//
-  if (!validatePatient(patient)) {
-    console.log("Paciente invalido");
+
+  let errores = validatePatient(patient);
+  if (errores.length > 0) {
+    let errorMessage = document.querySelector("#error-message");
+    errorMessage.textContent = error;
     return;
   }
+  // if (!validatePatient(patient)) {
+  //   console.log("Paciente invalido");
+  //   return;
+  // }
   table.appendChild(patientTr);
   form.reset(); // reseteamos el formulario
 
@@ -62,8 +69,13 @@ let capturePatientData = function (form) {
 };
 
 let validatePatient = (patient) => {
-  if (validatePatientWeight(patient.weightForm)) {
-    return true;
+  let errores = [];
+  if (!validatePatientWeight(patient.weightForm)) {
+    errores.push("El peso es invalido");
   }
-  return false;
+
+  if (!validatePatientHeight(patient.heightForm)) {
+    errores.push("La altura es invalida");
+  }
+  return errores;
 };

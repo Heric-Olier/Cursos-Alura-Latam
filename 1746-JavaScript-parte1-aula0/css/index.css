@@ -140,3 +140,9 @@ button:disabled {
 #titulo-form {
   padding-top: 20px;
 }
+
+#error-message {
+  color: salmon;
+  font-weight: bold;
+
+}
