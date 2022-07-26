@@ -12,8 +12,7 @@ addPatientBtn.addEventListener("click", function (event) {
 
   let errores = validatePatient(patient);
   if (errores.length > 0) {
-    let errorMessage = document.querySelector("#error-message");
-    errorMessage.textContent = error;
+    showMessageError(errores);
     return;
   }
   // if (!validatePatient(patient)) {
@@ -78,4 +77,14 @@ let validatePatient = (patient) => {
     errores.push("La altura es invalida");
   }
   return errores;
+};
+
+let showMessageError = (errores) => {
+  let errorMessage = document.querySelector("#error-message");
+
+  errores.forEach(function (error) {
+    let li = document.createElement("li");
+    length.textContent = error;
+    ul.appendChild(li);
+  });
 };
