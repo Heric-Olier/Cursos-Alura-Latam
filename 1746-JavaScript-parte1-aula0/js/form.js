@@ -15,12 +15,12 @@ addPatientBtn.addEventListener("click", function (event) {
     showMessageError(errores);
     return;
   }
-  // if (!validatePatient(patient)) {
-  //   console.log("Paciente invalido");
-  //   return;
-  // }
+
   table.appendChild(patientTr);
   form.reset(); // reseteamos el formulario
+
+  let errorMessage = document.querySelector("#error-message");
+  errorMessage.innerHTML = "";
 
   /* Validacion de los datos ingresados */
 });
@@ -67,8 +67,25 @@ let capturePatientData = function (form) {
   return patient;
 };
 
+//! validacion de los datos ingresados
+
 let validatePatient = (patient) => {
   let errores = [];
+  if (patient.nameForm.length == 0) {
+    errores.push("El nombre no puede estar vacio");
+  }
+  if (patient.weightForm.length == 0) {
+    errores.push("El peso no puede estar vacio");
+  }
+
+  if (patient.heightForm.length == 0) {
+    errores.push("La altura no puede estar vacia");
+  }
+
+  if (patient.fatnessForm.length == 0) {
+    errores.push("El % de gordura no puede estar vacia");
+  }
+
   if (!validatePatientWeight(patient.weightForm)) {
     errores.push("El peso es invalido");
   }
@@ -80,11 +97,12 @@ let validatePatient = (patient) => {
 };
 
 let showMessageError = (errores) => {
-  let errorMessage = document.querySelector("#error-message");
+  let ul = document.querySelector("#error-message");
+  ul.innerHTML = "";
 
   errores.forEach(function (error) {
     let li = document.createElement("li");
-    length.textContent = error;
+    li.textContent = error;
     ul.appendChild(li);
   });
 };
