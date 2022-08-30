@@ -1,54 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Calcular IMC</title>
-</head>
-<style>
+  </head>
+  <style>
     h1 {
-        text-align: center;
-        -webkit-text-stroke: 0.8px blue;
-        font-family: 'Lato', sans-serif;
+      text-align: center;
+      -webkit-text-stroke: 0.8px blue;
+      font-family: "Lato", sans-serif;
     }
-</style>
+  </style>
 
-<body>
+  <body>
     <h1>PROGRAMA AÑO MUNDIAL DE FIFA</h1>
-
-</body>
-
+  </body>
 </html>
 <script>
+  function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+  }
 
-    function saltarLinea() {
-        document.write("<br>");
-        document.write("<br>");
-        document.write("<br>");
+  function imprimir(frase) {
+    document.write("<big>" + frase + "</big>");
+    saltarLinea();
+  }
 
-    }
+  let anoMundial = 1930;
+  let limite = parseInt(prompt("Ingrese el año limite para calcular"));
 
-    function imprimir(frase) {
-        document.write("<big>" + frase + "</big>");
-        saltarLinea();
-    }
+  while (anoMundial <= limite) {
+    imprimir("Hubo mundial de la FIFA en el año " + anoMundial);
+    anoMundial = anoMundial + 4;
+  }
 
-    let anoMundial = 1930;
-    let limite = parseInt(prompt("Ingrese el año limite para calcular"))
-
-    while (anoMundial <= limite) {
-
-        
-        imprimir("Hubo mundial de la FIFA en el año " + anoMundial);
-        anoMundial = anoMundial + 4;
-    }
-
-    imprimir("fin");
-
-
-
-
-
-
-
+  imprimir("fin");
 </script>
