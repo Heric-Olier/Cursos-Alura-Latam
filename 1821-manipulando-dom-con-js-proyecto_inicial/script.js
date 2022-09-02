@@ -36,7 +36,7 @@ btnCreate.addEventListener("click", createTask);
 
 const checkTask = () => {
   const i = document.createElement("i");
-  i.classList.add( "fas", "fa-check-circle", "checkIcon", "icon");
+  i.classList.add( "fas", "fa-regular", "fa-circle-check", "icon");
   return i;
 };
 
