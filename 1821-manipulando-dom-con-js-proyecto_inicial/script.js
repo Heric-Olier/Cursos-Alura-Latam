@@ -26,7 +26,6 @@ const createTask = (event) => {
     const checkIcon = task.querySelector(".fa-circle-check");
     checkIcon.addEventListener("click", completeTask);
 
-    
     // console.log(formInput.value);
     // console.log(content);
   }
@@ -43,10 +42,10 @@ const checkTask = () => {
 const completeTask = () => {
   i.classList.add("fa-solid", "fa-circle-check");
   console.log("completada");
-
 };
 
 const deleteTask = (event) => {
   const task = event.target.parentElement;
   task.remove();
 };
+
