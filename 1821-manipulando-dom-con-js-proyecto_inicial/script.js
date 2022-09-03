@@ -22,11 +22,11 @@ const createTask = (event) => {
 
     const trashIcon = task.querySelector(".trashIcon");
     trashIcon.addEventListener("click", deleteTask);
-    
-    const checkIcon = task.querySelector(".checkIcon");
+
+    const checkIcon = task.querySelector(".fa-circle-check");
     checkIcon.addEventListener("click", completeTask);
 
-
+    
     // console.log(formInput.value);
     // console.log(content);
   }
@@ -34,19 +34,19 @@ const createTask = (event) => {
 
 btnCreate.addEventListener("click", createTask);
 
+const i = document.createElement("i");
 const checkTask = () => {
-  const i = document.createElement("i");
-  i.classList.add( "fas", "fa-regular", "fa-circle-check", "icon");
+  i.classList.add("fa-regular", "fa-circle-check", "icon");
   return i;
 };
 
-const completeTask = (event) => {
-    const task = event.target.parentElement;
-    const taskText = task.querySelector(".task");
-    taskText.classList.toggle("checked");
+const completeTask = () => {
+  i.classList.add("fa-solid", "fa-circle-check");
+  console.log("completada");
+
 };
 
 const deleteTask = (event) => {
-    const task = event.target.parentElement;
-    task.remove();
-    };
+  const task = event.target.parentElement;
+  task.remove();
+};
