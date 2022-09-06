@@ -1,15 +1,15 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Dosis', sans-serif;
+  font-family: poppins, sans-serif;
   font-size: 16px;
 }
 
 main {
   background-image: linear-gradient(
     109.6deg,
-    rgba(62, 161, 219, 1) 11.2%,
-    rgba(93, 52, 236, 1) 100.2%
+    rgb(190, 179, 233) 11.2%,
+    rgb(185, 80, 233) 100.2%
   );
   width: 100vw;
   height: 100vh;
@@ -28,17 +28,22 @@ form {
 
 .mainCard {
   width: 40vw;
-  border-radius: 25px;
+  border-radius: 20px;
   background-color: #fff;
   padding: 25px;
+  box-shadow: 0 0 14px rgba(126, 126, 126, 0.2);
 }
 
 .title {
   font-family: 'Dosis', sans-serif;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-content: center;
   margin-bottom: 15px;
+}
+
+.title img {
+  width: 12rem;
 }
 
 .inputForm {
@@ -80,12 +85,13 @@ form {
 .card {
   width: 90%;
   padding: 15px;
-  box-shadow: 2px 4px 4px 4px rgba(71, 71, 71, 0.16);
+  box-shadow: 2px 4px 14px 4px rgba(136, 136, 136, 0.16);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
   margin: 5px 0px;
+  border-radius: 10px;
   position: relative;
 }
 
@@ -95,6 +101,8 @@ form {
 
 .icon {
   cursor: pointer;
+  font-size: 22px;
+  transition: all 0.3s;
 }
 
 .icon:hover {
@@ -107,6 +115,11 @@ form {
 
 .trashIcon:hover {
   color: #f00;
+}
+
+.fa-solid {
+  color: rgba(62, 161, 219, 1);
+  transition: all 0.3s;
 }
 
 .deleteConfirmationPop {
@@ -124,9 +137,4 @@ form {
 
 .noTasks {
   font-size: 48px;
-}
-
-.checked {
-  
-  color: red;
 }

@@ -23,13 +23,15 @@ const createTask = (event) => {
     const trashIcon = task.querySelector(".trashIcon");
     trashIcon.addEventListener("click", deleteTask);
 
-    const checkIcon = task.querySelector(".fa-circle-check");
-    checkIcon.addEventListener("click", completeTask);
+    const checkIcon = task.querySelector(".fa-regular");
+    checkIcon.addEventListener("click", () => {
+      checkIcon.classList.toggle("fa-solid");
+     
 
-    // console.log(formInput.value);
-    // console.log(content);
+    });
   }
 };
+
 
 btnCreate.addEventListener("click", createTask);
 
@@ -39,10 +41,6 @@ const checkTask = () => {
   return i;
 };
 
-const completeTask = () => {
-  i.classList.add("fa-solid", "fa-circle-check");
-  console.log("completada");
-};
 
 const deleteTask = (event) => {
   const task = event.target.parentElement;
