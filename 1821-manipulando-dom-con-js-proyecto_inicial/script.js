@@ -1,5 +1,6 @@
 const btnCreate = document.querySelector("[data-form-btn]");
 
+
 const createTask = (event) => {
   event.preventDefault();
   const formInput = document.querySelector("[data-form-input]");
@@ -15,17 +16,23 @@ const createTask = (event) => {
     ${checkTask().outerHTML}
     <span class="task">${value}</span>
   </div>
-  <i class="fas fa-trash-alt trashIcon icon"></i>
-  <i class="fas fa-edit editIcon icon"></i>`;
+  <i class="fas fa-trash-alt trashIcon icon"></i>`;
     task.innerHTML += content;
     list.appendChild(task);
 
     const trashIcon = task.querySelector(".trashIcon");
     trashIcon.addEventListener("click", deleteTask);
 
+    
     const checkIcon = task.querySelector(".fa-regular");
     checkIcon.addEventListener("click", () => {
       checkIcon.classList.toggle("fa-solid");
+      if (checkIcon.classList.contains("fa-solid")) {
+        task.classList.add("card-active");
+      } 
+      else {
+        task.classList.remove("card-active");
+      }
      
 
     });
@@ -37,6 +44,7 @@ btnCreate.addEventListener("click", createTask);
 
 const i = document.createElement("i");
 const checkTask = () => {
+
   i.classList.add("fa-regular", "fa-circle-check", "icon");
   return i;
 };
@@ -46,4 +54,6 @@ const deleteTask = (event) => {
   const task = event.target.parentElement;
   task.remove();
 };
+
+
 

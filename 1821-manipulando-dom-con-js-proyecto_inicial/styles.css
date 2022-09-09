@@ -9,7 +9,7 @@ main {
   background-image: linear-gradient(
     109.6deg,
     rgb(190, 179, 233) 11.2%,
-    rgb(185, 80, 233) 100.2%
+    rgb(164, 80, 233) 100.2%
   );
   width: 100vw;
   height: 100vh;
@@ -23,27 +23,32 @@ form {
   justify-content: space-between;
   align-items: center;
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .mainCard {
-  width: 40vw;
-  border-radius: 20px;
+  width: 90%;
+  max-width: 560px;
+  margin: 0 20px;
+  border-radius: 10px;
   background-color: #fff;
-  padding: 25px;
+  padding: 20px;
   box-shadow: 0 0 14px rgba(126, 126, 126, 0.2);
 }
 
 .title {
+  width: 100%;
   font-family: "Dosis", sans-serif;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-content: center;
-  margin-bottom: 15px;
+  border-bottom: 2px solid rgb(164, 80, 233);
+  margin-bottom: 35px;
 }
 
 .title img {
-  width: 12rem;
+  width: 11rem;
+  margin-bottom: 12px;
 }
 
 .inputForm {
@@ -59,15 +64,17 @@ form {
 }
 
 .btnCreate {
-  padding: 10px 15px;
+  width: 40px;
+  height: 40px;
   background-image: linear-gradient(
-    109.6deg,
-    rgba(62, 161, 219, 1) 11.2%,
-    rgba(93, 52, 236, 1) 100.2%
+    160deg,
+    rgba(229, 87, 149, 1) 11.2%,
+    rgba(84, 100, 188, 1) 100.2%
+
   );
   border: none;
   color: #fff;
-  border-radius: 5px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
@@ -78,36 +85,59 @@ form {
   align-items: center;
   justify-content: flex-start;
   overflow-y: scroll;
+  overflow: auto;
   max-height: 60vh;
   height: 60vh;
 }
 
+.cardsList::-webkit-scrollbar {
+  width: 0rem;
+}
+
+.cardsList::-webkit-scrollbar-track {
+  background: rgb(190, 179, 233);
+}
+
+.cardsList::-webkit-scrollbar-thumb {
+  background: rgb(164, 80, 233);
+}
+
+
 .card {
-  width: 90%;
-  padding: 15px;
-  box-shadow: 2px 4px 14px 4px rgba(136, 136, 136, 0.16);
+  width: 86%;
+  padding: 13px;
+  /* box-shadow: 2px 4px 14px 4px rgba(136, 136, 136, 0.16); */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  margin: 5px 0px;
-  border-radius: 10px;
+  margin: 10px 0px;
+  border: 1px solid rgb(216, 207, 219);
+  border-radius: 5px;
   position: relative;
+  transition: all 0.3s ease;
 }
+
+.card-active {
+  /* border: 1px solid rgb(202, 162, 235); */
+  
+  /* text-decoration: line-through; */
+}
+
 
 .task {
   padding: 10px;
+  font-size: 14px;
 }
 
 .icon {
   cursor: pointer;
-  font-size: 22px;
+  font-size: 20px;
   transition: all 0.3s;
+  text-decoration: none;
+  color: rgb(63, 59, 68);
 }
 
-.icon:hover {
-  color: rgba(62, 161, 219, 1);
-}
 
 .completeIcon {
   color: rgba(62, 161, 219, 1);
@@ -118,8 +148,20 @@ form {
 }
 
 .fa-solid {
-  color: rgba(62, 161, 219, 1);
+  
+  background-image: linear-gradient(
+    160deg,
+    rgba(229, 87, 149, 1) 11.2%,
+    rgba(84, 100, 188, 1) 100.2%
+  );
+ background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   transition: all 0.3s;
+}
+
+.card-active {
+  background-color: rgb(235, 219, 248);
 }
 
 .deleteConfirmationPop {
