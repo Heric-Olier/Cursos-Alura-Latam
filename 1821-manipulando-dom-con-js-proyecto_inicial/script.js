@@ -12,9 +12,12 @@ const createTask = (event) => {
   } else {
     task.classList.add("card");
     formInput.value = "";
-    const content = `<div>
+    const content = `<div class="content__task">
     ${checkTask().outerHTML}
+    <div class="content__task-text">
     <span class="task">${value}</span>
+    <span class="date">${new Date().toLocaleDateString()}</span>
+    </div>
     </div>
     <i class="fas fa-trash-alt trashIcon icon"></i>`;
     task.innerHTML += content;
@@ -71,3 +74,21 @@ const validateCompletedTask = () => {
   taskNumber.innerHTML = task.length;
   console.log(task.length);
 };
+
+// borramos todas las tareas completadas
+const deleteAllTask = () => {
+  const task = document.querySelectorAll(".card-active");
+  task.forEach((element) => {
+    element.classList.add("delete-animation");
+    element.addEventListener("transitionend", () => {
+      element.remove();
+      validateTask();
+      validateCompletedTask();
+    });
+  });
+};
+
+const btnDeleteAll = document.querySelector("[data-delete-all]");
+const taskCompletedNumber = document.querySelector("task-number__text--completed");
+btnDeleteAll.addEventListener("click", deleteAllTask);
+
