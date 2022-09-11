@@ -19,10 +19,10 @@ const createTask = (event) => {
     <i class="fas fa-trash-alt trashIcon icon"></i>`;
     task.innerHTML += content;
     list.appendChild(task);
-    
+
     const trashIcon = task.querySelector(".trashIcon");
     trashIcon.addEventListener("click", deleteTask);
-    
+
     const checkIcon = task.querySelector(".fa-regular");
     checkIcon.addEventListener("click", () => {
       checkIcon.classList.toggle("fa-solid");
@@ -36,7 +36,6 @@ const createTask = (event) => {
   }
   validateTask();
 };
-
 
 btnCreate.addEventListener("click", createTask);
 
@@ -71,8 +70,4 @@ const validateCompletedTask = () => {
   const taskNumber = document.querySelector("[data-task-completed]");
   taskNumber.innerHTML = task.length;
   console.log(task.length);
-}
-
-
-
-
+};
