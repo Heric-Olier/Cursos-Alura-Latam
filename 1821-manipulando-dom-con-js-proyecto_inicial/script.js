@@ -30,7 +30,6 @@ const createTask = (event) => {
         task.classList.add("card-active");
       } else {
         task.classList.remove("card-active");
-
       }
       validateCompletedTask();
     });
