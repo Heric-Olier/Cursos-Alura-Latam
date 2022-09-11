@@ -89,6 +89,7 @@ const deleteAllTask = () => {
 };
 
 const btnDeleteAll = document.querySelector("[data-delete-all]");
-const taskCompletedNumber = document.querySelector("task-number__text--completed");
+const taskCompletedNumber = document.querySelector(
+  "task-number__text--completed"
+);
 btnDeleteAll.addEventListener("click", deleteAllTask);
-
