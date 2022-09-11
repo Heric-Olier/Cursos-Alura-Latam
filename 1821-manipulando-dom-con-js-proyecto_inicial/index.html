@@ -39,25 +39,41 @@
 
   <body>
     <main>
-      <div class="mainCard">
-        <div class="title"><img src="./assets/logo-todo-list.png" /></div>
-        <div>
-          <form action="">
-            <input
-              type="text"
-              name="task"
-              placeholder="Nombre de la tarea"
-              class="inputForm"
-              autocomplete="off"
-              data-form-input
-            />
-            <button type="submit" class="btnCreate" data-form-btn>
-              <i class="fas fa-plus-circle"></i>
-            </button>
-          </form>
+      <main class="main__container">
+        
+        <div class="mainCard">
+          <div class="title"><img src="./assets/logo-todo-list.png" /></div>
+          <div class="main__card-add-task" >
+            <form action="">
+              <input
+                type="text"
+                name="task"
+                placeholder="Add a new task"
+                class="inputForm"
+                autocomplete="off"
+                data-form-input
+              />
+              <button type="submit" class="btnCreate" data-form-btn>
+                Add Task
+                <!-- <i class="fas fa-plus-circle"></i> -->
+              </button>
+            </form>
+          </div>
+          <div class="task__list" data-task-list>
+            <div class="task__list-content">
+              <div class="task__left">
+                <h1 class="task-number" data-task-number>0</h1>
+                  <span class="task-number__text">Task left</span>
+              </div>
+              <div class="task__completed">
+                <h1 class="task-number__text--completed" data-task-completed>0</h1>
+                <span class="task-number__text">Clear completed</span>
+              </div>
+            </div>
+          </div>
+          <ul class="cardsList" data-list></ul>
         </div>
-        <ul class="cardsList" data-list></ul>
-      </div>
+      </main>
     </main>
     <script src="script.js"></script>
   </body>

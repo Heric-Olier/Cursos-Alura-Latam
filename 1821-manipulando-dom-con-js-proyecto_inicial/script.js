@@ -1,6 +1,6 @@
 const btnCreate = document.querySelector("[data-form-btn]");
 
-
+// creamos las tareas
 const createTask = (event) => {
   event.preventDefault();
   const formInput = document.querySelector("[data-form-input]");
@@ -15,45 +15,65 @@ const createTask = (event) => {
     const content = `<div>
     ${checkTask().outerHTML}
     <span class="task">${value}</span>
-  </div>
-  <i class="fas fa-trash-alt trashIcon icon"></i>`;
+    </div>
+    <i class="fas fa-trash-alt trashIcon icon"></i>`;
     task.innerHTML += content;
     list.appendChild(task);
-
+    
     const trashIcon = task.querySelector(".trashIcon");
     trashIcon.addEventListener("click", deleteTask);
-
     
     const checkIcon = task.querySelector(".fa-regular");
     checkIcon.addEventListener("click", () => {
       checkIcon.classList.toggle("fa-solid");
       if (checkIcon.classList.contains("fa-solid")) {
         task.classList.add("card-active");
-      } 
-      else {
+      } else {
         task.classList.remove("card-active");
-      }
-     
 
+      }
+      validateCompletedTask();
     });
   }
+  validateTask();
 };
 
 
 btnCreate.addEventListener("click", createTask);
 
+// creamos el icono de check
 const i = document.createElement("i");
 const checkTask = () => {
-
   i.classList.add("fa-regular", "fa-circle-check", "icon");
   return i;
 };
 
-
+// borramos las tareas
 const deleteTask = (event) => {
   const task = event.target.parentElement;
-  task.remove();
+  task.classList.add("delete-animation");
+  task.addEventListener("transitionend", () => {
+    task.remove();
+    validateTask();
+    validateCompletedTask();
+  });
 };
+
+// validamos el numero de tareas
+const validateTask = () => {
+  const task = document.querySelectorAll(".card");
+  const taskNumber = document.querySelector("[data-task-number]");
+  taskNumber.innerHTML = task.length;
+};
+
+// validamos el numero de tareas completadas
+const validateCompletedTask = () => {
+  const task = document.querySelectorAll(".card-active");
+  const taskNumber = document.querySelector("[data-task-completed]");
+  taskNumber.innerHTML = task.length;
+  console.log(task.length);
+}
+
 
 
 
