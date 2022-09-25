@@ -16,8 +16,8 @@ const createTask = (event) => {
     ${checkTask().outerHTML}
     <div class="content__task-text">
     <span class="task">${value}</span>
-    <span class="date">${new Date().toLocaleDateString()}</span>
-    </div>
+    <span class="date"> ${dayName}${','} ${day} ${monthName}${','} ${year}</span>
+      </div>
     </div>
     <i class="fas fa-trash-alt trashIcon icon"></i>`;
     task.innerHTML += content;
@@ -93,3 +93,11 @@ const taskCompletedNumber = document.querySelector(
   "task-number__text--completed"
 );
 btnDeleteAll.addEventListener("click", deleteAllTask);
+
+// creamos la fecha
+const date = new Date();
+const day = date.getDate();
+const dayName = date.toLocaleString("en-EN", { weekday: "short" });
+const month = date.getMonth();
+const monthName = date.toLocaleString("en-EN", { month: "short" });
+const year = date.getFullYear();
