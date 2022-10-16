@@ -1,62 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kanit:ital,wght@0,200;1,100&display=swap"
-        rel="stylesheet">
-    <meta charset="UTF-8">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kanit:ital,wght@0,200;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
     <title>Numeros del 1 al 100</title>
-</head>
-<style>
+  </head>
+  <style>
     h1 {
-        font-size: 60px;
-        text-align: center;
-        -webkit-text-stroke: 0.3px rgb(255, 255, 255);
-        -webkit-text-fill-color: rgb(255, 24, 24);
-        font-family: "Fredoka One";
-        text-shadow:
-            4px 4px 0 #000,
-            -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;
+      font-size: 60px;
+      text-align: center;
+      -webkit-text-stroke: 0.3px rgb(255, 255, 255);
+      -webkit-text-fill-color: rgb(255, 24, 24);
+      font-family: "Fredoka One";
+      text-shadow: 4px 4px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+        -1px 1px 0 #000, 1px 1px 0 #000;
     }
 
     body {
-        background-color: rgb(38, 150, 255);
+      background-color: rgb(38, 150, 255);
     }
-</style>
+  </style>
 
-<body>
+  <body>
     <h1>Numeros del 1 al 100</h1>
-
-</body>
-
+  </body>
 </html>
 <script>
+  function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+  }
 
-    function saltarLinea() {
-        document.write("<br>");
-        document.write("<br>");
-        document.write("<br>");
+  function imprimir(frase) {
+    document.write("<big>" + frase + "</big>");
+    saltarLinea();
+  }
 
-    }
+  let numero = 2;
 
-    function imprimir(frase) {
-        document.write("<big>" + frase + "</big>");
-        saltarLinea();
-    }
-
-    let numero = 2;
-
-    while (numero <= 100) {
-        imprimir(numero);
-        numero = numero + 2;
-    }
-    imprimir("Fin");
-
-    </script>
-
-
+  while (numero <= 100) {
+    imprimir(numero);
+    numero = numero + 2;
+  }
+  imprimir("Fin");
+</script>
