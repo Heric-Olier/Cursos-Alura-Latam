@@ -16,7 +16,7 @@ const createTask = (event) => {
     ${checkTask().outerHTML}
     <div class="content__task-text">
     <span class="task">${value}</span>
-    <span class="date"> ${dayName}${','} ${day} ${monthName}${','} ${year}</span>
+    <span class="date"> ${dayName}${","} ${day} ${monthName}${","} ${year}</span>
       </div>
     </div>
     <i class="fas fa-trash-alt trashIcon icon"></i>`;
