@@ -177,11 +177,11 @@ form {
 }
 
 .task__list {
-  width: 100%;
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   padding-bottom: 16px;
+  width: 100%;
 }
 
 .task__list-content {
@@ -223,11 +223,11 @@ form {
 }
 
 .icon {
+  color: rgb(63, 59, 68);
   cursor: pointer;
   font-size: 22px;
-  transition: all 0.3s;
   text-decoration: none;
-  color: rgb(63, 59, 68);
+  transition: all 0.3s;
 }
 
 .completeIcon {
@@ -247,11 +247,11 @@ form {
 }
 
 .fa-solid {
-  border: none;
-  border-radius: 100%;
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-radius: 100%;
+  border: none;
 
   background-image: linear-gradient(
     rgba(229, 87, 149, 1) 11.2%,
