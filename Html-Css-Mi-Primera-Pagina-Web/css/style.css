@@ -215,10 +215,10 @@ p::first-line {
 }
 
 .container-main {
-  margin: 0 auto;
-  width: 940px;
   background-color: #fefefe;
+  margin: 0 auto;
   padding: 3em 0;
+  width: 940px;
 }
 
 .utensilios {
@@ -273,9 +273,9 @@ p::first-line {
 }
 
 .img-diferenciales {
-  width: 60%;
   box-shadow: 0 0 10px #000;
   transition: 400ms;
+  width: 60%;
 }
 
 .img-diferenciales:hover {
