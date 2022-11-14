@@ -24,14 +24,14 @@ body {
 }
 
 .div2 {
+  background-color: rgb(0, 0, 0);
+  border-radius: 16px;
+  box-align: center;
+  box-shadow: 0 0 10px rgb(134, 134, 134);
+  color: rgb(101, 240, 240);
   font-family: sans-serif;
   font-size: 20px;
-  border-radius: 16px;
-  width: 400px;
-  background-color: rgb(0, 0, 0);
   padding: 20px;
-  box-shadow: 0 0 10px rgb(134, 134, 134);
   text-align: center;
-  box-align: center;
-  color: rgb(101, 240, 240);
+  width: 400px;
 }
