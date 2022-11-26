@@ -269,12 +269,12 @@ form {
 }
 
 .deleteConfirmationPop {
-  position: relative;
   background-color: rgba(255, 255, 255);
-  z-index: 99;
-  width: 100%;
-  top: -100px;
   left: 0;
+  position: relative;
+  top: -100px;
+  width: 100%;
+  z-index: 99;
 }
 .deleteSpace {
   position: relative;
