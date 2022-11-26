@@ -36,10 +36,10 @@ nav li {
 
 nav a {
   color: var(--color-background-black);
+  font-size: 24px;
+  font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 24px;
   transition: 0.3s ease all;
 }
 
