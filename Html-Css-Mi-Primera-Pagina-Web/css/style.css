@@ -175,10 +175,10 @@ th {
 }
 
 .title-main {
-  text-align: center;
+  clear: left;
   font-size: 2em;
   margin: 0 0 1em;
-  clear: left;
+  text-align: center;
 }
 
 .title-main::first-letter {
